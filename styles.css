@@ -53,7 +53,7 @@ header nav ul li:hover{
 }
 /* INDEX */
 .left_side, .right_side{   /*Split screen, acompañado de @media*/
-    height: 100vh;
+    height: 80vh;
     width: 100%;
 }
 .left_side{ /*Orden de objetos*/
@@ -65,6 +65,7 @@ header nav ul li:hover{
 .right_side{
     background-image: url(./Media/Imagenindex2.png);
     background-size: cover;
+    
 }
 /* Visual index */
 .titulo_index {
@@ -188,7 +189,7 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
-    height: fit-content;
+    height: 80px;
     width: 100vw;
 }
 footer ul li{ /*spacing */
@@ -246,7 +247,10 @@ footer .row{ /*correcion de visuales en footer*/
     }
     .estilo_link{
         font-size: 20px;
-}
+    }
+    footer{
+        height: fit-content;
+    }
 }
     @media only screen and (min-width: 769px) {
 
@@ -263,6 +267,7 @@ footer .row{ /*correcion de visuales en footer*/
         .estilo_link{
             font-size: 20px;
         }
+
     }
     @media only screen and (min-width: 1100px) {
         header nav ul li{
