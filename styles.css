@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;1,200;1,300;1,600;1,900&family=Oswald:wght@200;300;400&family=Signika+Negative:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    background-color: rgb(250, 241, 229);
+}
+
+/* HEADER*/
+header{ /* Defino footer y header */
+    background: url(./Media/Banner/1.jpg);
+    background-size: cover;
+    width: 100vw;
+}
+header nav ul, footer ul{  /* estilo compartidos footer y header */
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 16px;
+}
+header div img{   /* acomododo logo*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition:0.3s;
+}
+header div img:hover{  
+    scale: 1.1;
+}
+ul li a{ 
+    color: black;
+    padding: 0 4px;
+    text-decoration: none;
+}
+header nav ul li{ /* Esto genera la caja bonita en la lista de navegacion*/
+    text-decoration: none;
+    background-color:#f3eade;
+    border:#442b0c 2px solid;
+    margin-right: 15px;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 0px 12px 0px 12px !important;
+    transition:  0.3s;
+    font-size: 25px;
+}
+header nav ul li:hover{
+    scale: 1.1;
+}
+/* INDEX */
+.left_side, .right_side{   /*Split screen, acompañado de @media*/
+    height: 100vh;
+    width: 100%;
+}
+.left_side{ /*Orden de objetos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3eade;
+}
+.right_side{
+    background-image: url(./Media/Imagenindex2.png);
+    background-size: cover;
+}
+/* Visual index */
+.titulo_index {
+    font-family: 'Cinzel', serif;
+    font-size: 80px;
+    text-align: center;
+}
+.texto_index{
+    width: 600px;
+    text-align: justify;
+    padding: 40px;
+    font-size: 20px;
+    color: rgb(3, 26, 6);
+    font-family: 'Montserrat', sans-serif;
+}
+.index_link{
+    width: 100%;
+    transition: 0.3s;
+}
+.estilo_link{
+    break-inside: avoid;
+    color: black;
+    background-color: #d99771;
+    border: #442b0c 2px solid;
+    border-radius: 25px;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 3px 5px 3px black;
+    padding: 10px 20px 10px 20px;
+}
+.index_link:hover{
+    scale: 1.2;
+}
+.estilo_link:hover{
+    background-color: #dbb098;
+    box-shadow: 10px 10px 8px black;
+}
+
+/* MENU */
+.estilo_menu{
+    margin: 5px;    
+    color: black;
+    background-color: #d99771;
+    border: #442b0c 2px solid;
+    border-radius: 25px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 3px 5px 3px black;
+    padding: 10px 10px 10px 10px;
+}
+.img_menu{
+    width: 200px;
+    height: auto;
+    border: 3px solid black ;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.big{
+    height: 150px;
+    width: auto;
+}
+
+.text_menu{
+    margin-left: 20px;
+}
+
+.max_w{
+    max-width: 800px;
+}
+/* Srvicios */
+.card-img-top{
+    object-fit: cover ;
+    border-top-right-radius: 25px;
+
+}
+.card{
+    transition: 0.3s;
+    border-radius: 25px;
+    border: #442b0c 2px solid;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px ;
+}
+.card3{
+    margin-bottom: 50%;
+}
+
+.card:hover{
+    scale: 1.1;
+}
+
+.h1_estilo{
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+}
+
+.correct{
+    height: 650px;
+}
+/* Inicio de ubicacion */
+.ubi_text{
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+}
+
+/*Inicio de footer*/
+
+footer{ 
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    background: url(./Media/Banner/1.jpg);
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: fit-content;
+    width: 100vw;
+}
+footer ul li{ /*spacing */
+    transition:  0.3s;
+    margin-right: 20px;
+}
+.link{ /*box bonita en call to action*/
+    background-color:#f3eade;
+    border:#442b0c 2px solid;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 4px 8px 4px 8px;
+    transition:  0.3s;
+}
+footer ul li:hover{
+    scale: 1.1;
+}
+footer .row{ /*correcion de visuales en footer*/
+    margin-left: 0;
+    padding: 0;
+    --bs-gutter-x: 0rem;
+    --bs-gutter-y: 0rem;
+    margin-top: 10px;
+}
+.fa-instagram:before {
+    content: "\f16d";
+    font-size: 60px;}
+
+/* @MEDIA */
+@media only screen and (min-width: 320px) and (max-width:768px) {
+    .left_side{
+        height: 100vh;
+        background-image: url(./Media/Imagenindex2.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .titulo_index, .texto_index{
+        background-color: #dab7a5ad;
+        border-radius: 15px;
+        padding: 10px 15px 10px 15px;
+    }
+    .titulo_index{
+        font-size: 40px;
+        width: 300px;
+    }
+    .right_side{
+        display: none;
+        height: 0vh;
+        width: 0%;
+    }
+    .texto_index{
+        font-size: 20px;
+        width: 400px;
+    }
+    .estilo_link{
+        font-size: 20px;
+}
+}
+    @media only screen and (min-width: 769px) {
+
+        header nav ul li{
+            font-size: 20px;
+        }
+        .titulo_index{
+            font-size: 50px;
+        }
+        .texto_index{
+            font-size: 20px;
+        width: 400px;
+        }
+        .estilo_link{
+            font-size: 20px;
+        }
+    }
+    @media only screen and (min-width: 1100px) {
+        header nav ul li{
+            font-size: 20px;
+        }
+        .texto_index{
+            font-size: 20px;
+            width: 600px;
+        }
+        .estilo_link{
+            font-size: 25px;
+        }
+        .card3{
+            margin-bottom: 0%;
+        }
+}
