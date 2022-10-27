@@ -11,11 +11,13 @@
     <link rel="shortcut icon" href="./Media/kofilogo_dark.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Header -->
     <header class="container-fluid text-center">
         <div class="col"  >
             <a href="index.html"><img src="./Media/kofilogo_dark.png" alt="KofiStore" width="180px" height="auto"></a>
         </div>
-        <nav class="d-flex justify-content-center ">
+        <!-- Navbar -->
+        <nav class="d-flex justify-content-evenly ">
             <ul class="row text-center  ">
                 <li class="col"><a href="menu.html">Menu</a></li>
                 <li class="col"><a href="servicios.html">Servicios</a></li>
@@ -25,23 +27,32 @@
         </nav>
     </header>
     <main>
+        <!--Contiene todo el contenido-->
         <section class="container mt-md-5 pt-md-5">
-            <div class="row align-items-center"> <!--Contiene todo el contenido-->
-                <div class="col text-center ubi_text">
-                    <h1>¿Donde estamos?</h1>
-                    <p>Av. 9 de Julio s/n, C1043 CABA</p>
+            <!-- Div padre, genera columnas -->
+            <div class="row align-items-center"> 
+                <!-- Informacion -->
+                <div class="col text-center ubi_text ">
+                    <h1 class="ubi_h1">¿Donde estamos?</h1>
+                    <p class="ubi_p">Av. 9 de Julio s/n, C1043 CABA</p>
+                    <!-- media -->
                 </div> 
                     <iframe class="col text-center" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167117870783!2d-58.38341073491385!3d-34.60373891813143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1663991827544!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>  
     </main>
-    <footer class="container-fluid text-center"> <!-- Tiene quedar primero el logo a la izquierda, despues contacto, mail y logo de insta con space around  -->
-        <ul class="footer_align row align-items-center align-content-center  ">
-            <li class="col m-1"><a href="./index.html"><img src="./Media/kofilogo_dark.png" height="80px" width="auto" alt=""></a></li>
+<!-- Footer -->
+<footer class="container-fluid text-center"> <!-- Tiene quedar primero el logo a la izquierda, despues contacto, mail y logo de insta con space around  -->
+    <nav>
+        <ul class="row align-items-center">
+            <li class="col"><a href="./index.html"><img src="./Media/kofilogo_dark.png" height="80px" width="auto" alt=""></a></li>
             <li class="col"><a class="link" href="contacto.html">Contacto</a></li>
             <li class="col"><span>All rights reserved @KofiStore 2022</span></li>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        </ul>
+    </nav>
+</footer>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

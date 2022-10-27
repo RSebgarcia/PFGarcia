@@ -15,10 +15,12 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header class="container-fluid text-center">
         <div class="col"  >
             <a href="index.html"><img src="./Media/kofilogo_dark.png" alt="KofiStore" width="180px" height="auto"></a>
         </div>
+        <!-- navbar -->
         <nav class="d-flex justify-content-center ">
             <ul class="row ">
                 <li class="col"><a href="menu.html">Menu</a></li>
@@ -28,11 +30,15 @@
             </ul>
         </nav>
     </header>
+    <!-- contenedor principal -->
     <main class="container-fluid">
+        <!-- columnas -->
         <section class="row justify-content-center">
-            <div class="col-sm-12 col-md-6 col-xl-6   max_w"> <!--Este div encierra TODO, esto genera bloques que puedo repetir-->
-                <div class="row text-center"> <!-- Titulo que var por encima de cada s-->
-                    <h2 class="col m-5">Cafe</h2>
+            <!--Este div encierra TODO, esto genera bloques que puedo repetir-->
+            <div class="col-sm-12 col-md-6 col-xl-6   max_w"> 
+                <!-- Titulo que var por encima de cada seccion-->
+                <div class="row text-center"> 
+                    <h2 class="col tit_menu m-5">Cafe</h2>
                 </div>
                 <article class="row ">
                     <div class="col">
@@ -51,9 +57,12 @@
                     </div>
                 </article>
             </div>
-            <div class="col-sm-12 col-md-6 col-xl-6   max_w"> <!--Este div encierra TODO, esto genera bloques que puedo repetir-->
-                <div class="row m_align text-center"> <!-- Titulo que var por encima de cada s-->
-                    <h2 class="col m-5">Jugos y Exprimidos</h2>
+            <!-- Aca finaliza el primer bloque y comienza el proximo -->
+            <!--Este div encierra TODO, esto genera bloques que puedo repetir-->
+            <div class="col-sm-12 col-md-6 col-xl-6   max_w"> 
+                <!-- Titulo que var por encima de cada s-->
+                <div class="row m_align text-center"> 
+                    <h2 class="col tit_menu jugo ">Jugos y Exprimidos</h2>
                 </div>
                 <article class="row ">
                     <div class="col">
@@ -71,9 +80,10 @@
                     </div>
                 </article>
             </div>
+            <!-- Aca finaliza el primer bloque y comienza el proximo -->
             <div class="col-sm-12 col-md-6 col-xl-6 max_w"> <!--Este div encierra TODO, esto genera bloques que puedo repetir-->
                 <div class="row m_align text-center"> <!-- Titulo que var por encima de cada s-->
-                    <h2 class="col m-5">Menu Dulce</h2>
+                    <h2 class="col tit_menu m-5">Menu Dulce</h2>
                 </div>
                 <article class="row ">
                     <div class="col">
@@ -92,36 +102,42 @@
                     </div>
                 </article>
             </div>
+            <!-- Aca finaliza el primer bloque y comienza el proximo -->
             <div class="col-sm-12 col-md-6 col-xl-6 long  max_w"> <!--Este div encierra TODO, esto genera bloques que puedo repetir-->
                 <div class="row m_align text-center"> <!-- Titulo que var por encima de cada s-->
-                    <h2 class="col m-5">Menu Salado</h2>
+                    <h2 class="col tit_menu m-5">Menu Salado</h2>
                 </div>
-                <article class="row ">
+                <article class="row end_menu ">
                     <div class="col">
                         <div class="row align-items-center estilo_menu" >
                             <div class="col-sm-12 col-xl-4  text-center text-xl-start">
-                            <img class="img_menu big" src="./Media/Menu/menuSalado.jpg" alt="">
+                            <img class="img_menu" src="./Media/Menu/menuSalado.jpg" alt="">
                             </div>
-                            <div class="col-sm ms-0 ms-xl-5 text-center text-xl-start mt-4 mt-xl-0 text_menu">
+                            <div class="col-sm ms-0 ms-xl-5 text-center text-xl-start mt-4 mt-xl-0 text_menu ">
                                 <p>Sanguches de miga especiales</p>
                                 <p>Brownie Relleno</p>
                                 <p>Pancake Salado</p>
                                 <P>Avocado Toast</P>
                                 <P>Chipa</P>
-                                <P>Tostada con queso crema y aleoli de ajo</P>
                             </div>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
+        <!-- Aca finaliza el ultimo bloque -->
     </main>
-    <footer class="container-fluid text-center"> <!-- Tiene quedar primero el logo a la izquierda, despues contacto, mail y logo de insta con space around  -->
-        <ul class="footer_align row align-items-center align-content-center  ">
+<!-- Footer -->
+<footer class="container-fluid text-center"> <!-- Tiene quedar primero el logo a la izquierda, despues contacto, mail y logo de insta con space around  -->
+    <nav>
+        <ul class="row align-items-center">
             <li class="col"><a href="./index.html"><img src="./Media/kofilogo_dark.png" height="80px" width="auto" alt=""></a></li>
             <li class="col"><a class="link" href="contacto.html">Contacto</a></li>
             <li class="col"><span>All rights reserved @KofiStore 2022</span></li>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        </ul>
+    </nav>
+</footer>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
