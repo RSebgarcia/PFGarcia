@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;1,200;1,300;1,600;1,900&family=Oswald:wght@200;300;400&family=Signika+Negative:wght@300;400;700&display=swap');
+/* margenes generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    background-color: #faf1e5;
+}
+/* inicio HEADER*/
+header{ /* Defino footer y header */
+    background: url(./Media/Banner/1.jpg);
+    background-size: cover;
+    width: 100vw;
+    div img{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transition:0.3s;
+        &:hover{  
+            scale: 1.1;
+        }  
+    }
+    li{ /* Esto genera la caja bonita en la lista de navegacion*/
+        
+        text-decoration: none;
+        background-color:#f3eade;
+        border:#442b0c 2px solid;
+        margin-right: 15px;
+        font-family: 'Cinzel', serif;
+        font-weight: 500;
+        border-radius: 25px;
+        padding: 0px 12px 0px 12px !important;
+        transition:  0.3s;
+        font-size: 25px;
+        &:hover{
+            scale: 1.1;
+        }
+        a{ 
+            color: black;
+            padding: 0 4px;
+            text-decoration: none;
+        }
+    }
+}
+header nav ul, footer ul{  /* estilo compartidos footer y header */
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* inicio INDEX */
+.left_side, .right_side{   /*Split screen, acompañado de @media*/
+    height: 80vh;
+    width: 100%;
+}
+.left_side{ /*Orden de objetos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3eade;
+} 
+.right_side{ /*Background de div vacio*/
+    background-image: url(./Media/Imagenindex2.png);
+    background-size: cover;
+}
+/* Visual index */
+.index_body{
+    overflow: hidden;
+}
+.titulo_index { /*titulos*/
+    font-family: 'Cinzel', serif;
+    font-size: 80px;
+    text-align: center;
+    
+}
+
+.index_link{ /*call to action*/
+    width: 100%;
+    transition: 0.3s;
+    &:hover{
+        scale: 1.2;
+    }
+}
+.estilo_link{/*call to action*/
+    break-inside: avoid;
+    color: black;
+    background-color: #d99771;
+    border: #442b0c 2px solid;
+    border-radius: 25px;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 3px 5px 3px black;
+    padding: 10px 20px 10px 20px;
+    &:hover{
+        background-color: #dbb098;
+        box-shadow: 10px 10px 8px black;
+    }
+}
+/* MENU */ 
+/* Estilo general */
+.estilo_menu{
+    margin: 5px;    
+    color: black;
+    background-color: #ffcaac;
+    border: #442b0c 2px solid;
+    border-radius: 25px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 25px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 3px 5px 3px black;
+    padding: 10px;
+} 
+/* Titulos del menu */
+.tit_menu{
+    font-size: 40px;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    padding: 0;
+}
+/* IMAGENES MENU */
+.img_menu{
+    width: 200px;
+    height: 270px;
+    border: 3px solid black ;
+    border-radius: 20px;
+    object-fit: cover;
+} 
+/* CUARTA IMAGEN, CORRECION */
+.jugo{
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+.text_menu{ /* Items del menu */
+    margin-left: 20px;
+}
+.max_w{ /* Correcion de margenes */
+    max-width: 800px;
+}
+.end_menu{
+    margin-bottom: 50%;
+}
+/* Fin Menu */
+/* Inicio Servicios */
+.card{  /*defino estilo de cards*/
+    transition: 0.3s;
+    border-radius: 25px;
+    border: #442b0c 2px solid;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px ;
+    &:hover{
+        scale: 1.1;
+    }
+}
+.card-img-top{ /*acomodo imagenes dento de los cards*/
+    object-fit: cover ;
+    border-top-right-radius: 25px;
+}
+.h1_estilo{
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+}
+.card3{ /*acomodo margenes*/
+    margin-bottom: 50%;
+}
+
+/* Fin Servicios */
+/* Inicio de ubicacion */
+.ubi_text{
+    background-color: #dbb098;
+    margin-right: 60px;
+    margin-left: 60px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: #4d2307 2px solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ubi_h1{
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-top: 8px;
+} 
+.ubi_p{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/*Fin Ubicacion*/
+/* Inicio Contacto*/
+.form_align{ /*margenes forms*/
+    margin-top: 50px;
+    margin-bottom: auto;
+    width: 400px;
+}
+.form{ /*estilo form*/
+    background-color: #dbb098;
+    padding: 20px;
+    border-radius: 10px;
+}
+.text_form{ 
+    text-align: center;
+    font-size: 20px;
+}
+::placeholder{
+    font-family: 'Montserrat', 
+}
+.btn-fancy{ /*estilo boton*/
+    background-color: #4d2307 ;
+    color: white;
+    font-family: 'Montserrat';
+    border-radius: 8px;
+    transition: 0.3s;
+    width: 150px;
+    &:hover{
+        text-shadow:  white 0 0 5px;
+        scale: 1.1;}
+}
+/* fin contacto */
+/*Inicio de footer*/
+footer{ 
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    background: url(./Media/Banner/1.jpg);
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    width: 100vw;
+    .row{ /*correcion de visuales en footer*/
+        margin-left: 0;
+        padding: 0;
+        --bs-gutter-x: 0rem;
+        --bs-gutter-y: 0rem;
+    }
+    ul li{ /*spacing */
+        transition:  0.3s;
+        margin-right: 20px;}
+        &:hover{
+            scale: 1.1;}
+    
+    }
+
+.fa-instagram:before {
+    content: "\f16d";
+    font-size: 60px;}
+/* @MEDIA */
+@media only screen and (min-width: 320px) and (max-width:768px) {
+    /*INDEX*/
+    .index_body{
+        overflow: scroll;
+    }
+    .left_side{ 
+        height: 100vh;
+        background-image: url(./Media/Imagenindex2.png);
+        background-size: cover;
+        background-position: center;
+    }
+    .titulo_index, .texto_index{
+        background-color: #dab7a5ad;
+        border-radius: 15px;
+        padding: 10px 15px 10px 15px;
+    }
+    .titulo_index{
+        font-size: 40px;
+        width: 300px;
+    }
+    .right_side{
+        display: none;
+        height: 0vh;
+        width: 0%;
+    }
+    .texto_index{
+        font-size: 20px;
+        width: 400px;
+    }
+    .estilo_link{ 
+        font-size: 20px;
+    }
+    /* FIN INDEX*/
+    /* Inicia footer */
+    footer{
+        height: fit-content;
+    }
+    /* Termina Footer */}
+    @media only screen and (min-width: 769px) {
+        /* Inicia Header */
+        header nav ul li{
+            font-size: 20px;
+        }
+        /* Termina Header */
+        /* inicia index */
+        .titulo_index{
+            font-size: 50px;
+        }
+        .texto_index{
+            font-size: 20px;
+        width: 400px;
+        }
+        .estilo_link{
+            font-size: 20px;
+        }/* temrina index */
+        /* inicia contacto */
+        .form_align{
+            margin-top: 100px;
+            width: 500px;
+        }
+        .end_menu{
+            margin-bottom: 20%;
+        }
+        /* termina contacto */
+        /* inicia ubicacion */
+        .ubi_text{
+            margin-right: 40px;
+            margin-left: 40px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        /* Termina ubicacion */
+    }
+    @media only screen and (min-width: 1100px) {
+        /* inicia Header */
+        header nav ul li{
+            font-size: 20px;
+        }
+        /* Termina header */
+        /* inicia Footer */
+        .texto_index{
+            font-size: 20px;
+            width: 600px;
+        }
+        .estilo_link{
+            font-size: 25px;
+        }
+        /* Termina footer */
+        /* inicia servicios */
+        .card3{
+            margin-bottom: 0%;
+        }
+        /* Termina servicios */
+        /* Inicia ubicacion */
+        .ubi_h1{
+            font-family: 'Cinzel', serif;
+            font-size: 50px;
+            margin-bottom: 0;
+            margin-top: 8px;
+        } 
+        /* Termina ubicacion */
+        /* inicia contacto */
+        .form_align{ /*margenes forms*/
+            width: 600px;
+        }
+        .form{ /*estilo form*
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .text_form{ 
+            font-size: 30px;
+        }
+        .btn-fancy{ /*estilo boton*/
+            font-size: 30px;
+        }
+        ::placeholder{
+            font-size: 20px;
+        }
+    
+}
+
