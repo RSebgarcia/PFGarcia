@@ -17,7 +17,7 @@ body {
 
 /* inicio HEADER*/
 header { /* Defino footer y header */
-  background: url(./Media/Banner/1.jpg);
+  background-image: url(./Media/Banner.jpg);
   background-size: cover;
   width: 100vw;
 }
@@ -32,6 +32,7 @@ header div img:hover {
 header li { /* Esto genera la caja bonita en la lista de navegacion*/
   text-decoration: none;
   background-color: #f3eade;
+  color: black;
   border: #442b0c 2px solid;
   margin-right: 15px;
   font-family: "Cinzel", serif;
@@ -43,6 +44,7 @@ header li { /* Esto genera la caja bonita en la lista de navegacion*/
 }
 header li:hover {
   scale: 1.1;
+  color: black;
 }
 header li a {
   color: black;
@@ -70,7 +72,7 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
 }
 
 .right_side { /*Background de div vacio*/
-  background-image: url(./Media/Imagenindex2.png);
+  background-image: url(./Media/fondoIndex.png);
   background-size: cover;
 }
 
@@ -93,8 +95,7 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   scale: 1.2;
 }
 
-.estilo_link {
-  /*call to action*/
+.estilo_link { /*call to action*/
   -moz-column-break-inside: avoid;
        break-inside: avoid;
   color: black;
@@ -275,7 +276,7 @@ footer {
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
-  background: url(./Media/Banner/1.jpg);
+  background: url(./Media/Banner.jpg);
   background-size: cover;
   position: fixed;
   bottom: 0;
@@ -283,48 +284,31 @@ footer {
   height: 80px;
   width: 100vw;
 }
-footer ul li { /*spacing */
-  transition: 0.3s;
-  margin-right: 20px;
-}
-
-.link { /*box bonita en call to action*/
-  /*call to action*/
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  color: black;
-  background-color: #d99771;
-  border: #442b0c 2px solid;
-  border-radius: 25px;
-  text-align: center;
-  text-transform: capitalize;
+footer .link {
   text-decoration: none;
-  font-weight: 400;
-  font-size: 40px;
-  font-family: "Montserrat", sans-serif;
-  box-shadow: 3px 5px 3px black;
-  padding: 10px 20px 10px 20px;
-  font-size: 20px;
+  background-color: #f3eade;
+  color: black;
+  border: #442b0c 2px solid;
+  margin-right: 15px;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 0px 12px 0px 12px !important;
+  transition: 0.3s;
+  font-size: 25px;
 }
-.link:hover {
-  background-color: #dbb098;
-  box-shadow: 10px 10px 8px black;
-}
-
-footer ul li:hover {
-  scale: 1.1;
-}
-
 footer .row { /*correcion de visuales en footer*/
   margin-left: 0;
-  padding: 0;
+  padding: 0px;
   --bs-gutter-x: 0rem;
   --bs-gutter-y: 0rem;
 }
-
-.fa-instagram:before {
-  content: "\f16d";
-  font-size: 60px;
+footer ul li {
+  transition: all 0.3s;
+  scale: 0.9;
+}
+footer ul li:hover {
+  scale: 1;
 }
 
 /* @MEDIA */
@@ -335,7 +319,7 @@ footer .row { /*correcion de visuales en footer*/
   }
   .left_side {
     height: 100vh;
-    background-image: url(./Media/Imagenindex2.png);
+    background-image: url(./Media/fondoIndex.png);
     background-size: cover;
     background-position: center;
   }
@@ -374,7 +358,6 @@ footer .row { /*correcion de visuales en footer*/
   header nav ul li {
     font-size: 20px;
   }
-  /* Termina Header */
   /* inicia index */
   .titulo_index {
     font-size: 50px;
@@ -385,7 +368,7 @@ footer .row { /*correcion de visuales en footer*/
   }
   .estilo_link {
     font-size: 20px;
-  } /* temrina index */
+  }
   /* inicia contacto */
   .form_align {
     margin-top: 100px;
@@ -394,7 +377,6 @@ footer .row { /*correcion de visuales en footer*/
   .end_menu {
     margin-bottom: 20%;
   }
-  /* termina contacto */
   /* inicia ubicacion */
   .ubi_text {
     margin-right: 40px;
@@ -409,7 +391,6 @@ footer .row { /*correcion de visuales en footer*/
   header nav ul li {
     font-size: 20px;
   }
-  /* Termina header */
   /* inicia Footer */
   .texto_index {
     font-size: 20px;
@@ -418,12 +399,10 @@ footer .row { /*correcion de visuales en footer*/
   .estilo_link {
     font-size: 25px;
   }
-  /* Termina footer */
   /* inicia servicios */
   .card3 {
     margin-bottom: 0%;
   }
-  /* Termina servicios */
   /* Inicia ubicacion */
   .ubi_h1 {
     font-family: "Cinzel", serif;
@@ -431,19 +410,18 @@ footer .row { /*correcion de visuales en footer*/
     margin-bottom: 0;
     margin-top: 8px;
   }
-  /* Termina ubicacion */
   /* inicia contacto */
   .form_align { /*margenes forms*/
     width: 600px;
   }
-  .form { /*estilo form*
+  .form { /*estilo form*/
     padding: 30px;
     border-radius: 10px;
-}
-.text_form{ 
+  }
+  .text_form {
     font-size: 30px;
-}
-.btn-fancy{ /*estilo boton*/
+  }
+  .btn-fancy { /*estilo boton*/
     font-size: 30px;
   }
   ::-moz-placeholder {
