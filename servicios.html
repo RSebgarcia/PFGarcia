@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>KofiStore</title>
 </head>
-<body>
+<body class="serv_body">
     <!-- header -->
     <header class="container-fluid text-center">
         <div class="col"  >
@@ -30,36 +30,79 @@
     </header>
     <main class="mt-5">
         <!-- Contenedor principal -->
-            <section class="container align_servicios">
+        <h2 class="text-center mb-5 h_estilo">Nuestos servicios</h2>
+            <section class="container row-align">
                 <!-- Comienzan -->
                 <div class="row g-5 align-items-center ">
                     <div class="col-12 col-lg-4">
                         <div class="card">
-                            <a href="./contacto.html"><img src="./Media/Servicios/Catering.jpg" class="card-img-top" alt="Hombre sirviendo bebidas en un catering."></a>
+                            <a href="#catering"><img src="./Media/Servicios/Catering.jpg" class="card-img-top" alt="Hombre sirviendo bebidas en un catering."></a>
                             <div class="card-body">
                                 <h5 class="card-title text-center">Catering de eventos</h5>
-                                <p class="card-text">Contratanos para cualquier evento que tengas, desde cumpleaños hasta casamientos!</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 ">
                         <div class="card">
-                            <a  href="./contacto.html"><img src="./Media/Servicios/Barista.jpg" class="card-img-top" alt="Barista sirviendo cafe."></a>
+                            <a  href="#local"><img src="./Media/Servicios/Barista.jpg" class="card-img-top" alt="Barista sirviendo cafe."></a>
                             <div class="card-body">
                                 <h5 class="card-title text-center">Servicio en el local</h5>
-                                <p class="card-text">¡Deja que uno de nuestros baristas profesionales te prepare el cafe de tu vida!</p>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
-                        <div class="card card3">
-                            <a href="./pages/contacto.html"><img src="./Media/Servicios/Alquiler.jpg" class="card-img-top" alt="Mesa con una merienda ideal."></a>
+                        <div class="card">
+                            <a href="#alquiler"><img src="./Media/Servicios/Alquiler.jpg" class="card-img-top" alt="Mesa con una merienda ideal."></a>
                             <div class="card-body">
                                 <h5 class="card-title text-center">Alquiler de local</h5>
-                                <p class="card-text" >¡Disfruta de nuestro local con hasta 50 personas!</p>
+                                <p class="card-text" ></p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section> 
+            <section id="catering"> <!--Descripcion de servicios-->
+                <h2 class="tit_serv h_estilo mt-5 text-center">Catering de eventos</h2>
+                <div class="jumbotron bg-white">
+                    <hr class="my-4">
+                    <p class="lead m-2 p-2">Brindamos catering profesional para cualquier evento. Ya sea un brunch laboral o un casamiento, nosotros te lo solucionamos.</p>
+                    <p class="followup m-2 p-2">Nos recomienda la Reina de Inglaterra.
+                    </p>
+                    <p class="lead m-2 p-2 text-center">¿Te interesa?</p>
+                    <p class="lead m-2 p-2 text-center ">
+                    <a class="btn btn-fancy  mb-2" href="./contacto.html" role="button">Contactanos</a>
+                    </p>
+                    <hr class="my-4">
+                </div>
+            </section>
+            <section id="local"> <!--Descripcion de servicios-->
+                <h2 class="tit_serv h_estilo text-center">Servicio en el local</h2>
+                <div class="jumbotron bg-white">
+                    <hr class="my-4">
+                    <p class="lead m-2 p-2">¡Deja que uno de nuestros baristas profesionales te prepare el cafe de tu vida!
+                    </p>
+                    <p class="followup m-2 p-2">Años de experiencia en las cafeterias mas importantes del mundo, capacitaciones exclusivas y mucha actitud son algunas de las razones que vuelven a nuestros baristas tan especiales.
+                    </p>
+                    <p class="lead m-2 p-2 text-center">¿Te interesa?</p>
+                    <p class="lead m-2 p-2 text-center ">
+                    <a class="btn btn-fancy  mb-2" href="./ubicacion.html" role="button">¡Acercate!</a>
+                    </p>
+                    <hr class="my-4">
+                </div>
+            </section>
+            <section id="alquiler"> <!--Descripcion de servicios-->
+                <h2 class="tit_serv h_estilo text-center">Alquiler de local</h2>
+                <div class="jumbotron bg-white">
+                    <hr class="my-4">
+                    <p class="lead m-2 p-2">¡Disfruta de nuestro local con hasta 50 personas!.</p>
+                    <p class="followup m-2 p-2">Multiples locales de increible calidad, diseñados por arquitectos importantisimos! ¿Que estilo te gusta mas? ¿Aleman? ¿Frances? ¿Colonial? Tenemos lo que buscas.
+                    </p>
+                    <p class="lead m-2 p-2 text-center">¿Te interesa?</p>
+                    <p class="lead m-2 p-2 text-center">
+                    <a class="btn btn-fancy  mb5" href="./contacto.html" role="button">Contactanos</a>
+                    </p>
+                    <hr class="my-4">
                 </div>
             </section>
     </main>
