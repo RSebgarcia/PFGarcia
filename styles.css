@@ -6,15 +6,11 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 .general-body {
   background-color: #faf1e5;
 }
 
-/* inicio HEADER*/
+/* -----------------------------------------------inicio HEADER----------------------------*/
 header { /* Defino header */
   background-image: url(./Media/Banner.jpg);
   background-size: cover;
@@ -58,7 +54,7 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   margin-bottom: 16px;
 }
 
-/* inicio INDEX */
+/* ----------------------------------------inicio INDEX---------------------------------- */
 .left_side, .right_side { /*Split screen, acompañado de @media*/
   height: 80vh;
   width: 100%;
@@ -116,7 +112,7 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   box-shadow: 10px 10px 8px black;
 }
 
-/* MENU */
+/*----------------------------------- MENU-------------------------------------------- */
 .estilo_menu { /* Estilo general */
   margin: 5px;
   color: black;
@@ -162,8 +158,7 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   margin-bottom: 50%;
 }
 
-/* Fin Menu */
-/* Inicio Servicios */
+/* ---------------------------------------Inicio Servicios---------------------------------- */
 .card_serv { /*defino estilo de cards*/
   transition: 0.3s;
   border: #442b0c 2px solid;
@@ -215,8 +210,7 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   color: white;
 }
 
-/* Fin Servicios */
-/* Inicio de ubicacion */
+/* ---------------------------------------Inicio de ubicacion ---------------------------*/
 .card_ubi { /*defino estilo de cards*/
   transition: 0.3s;
   border: #442b0c 2px solid;
@@ -271,7 +265,8 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   position: absolute;
 }
 
-.contact-bg { /* Inicio Contacto*/
+/*-------------------------------- Inicio Contacto---------------------------------------*/
+.contact-bg {
   background-image: url(./Media/contacto.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -340,7 +335,8 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   animation: slide-in-bottom 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
 }
 
-footer { /*------------------------Inicio de footer------------------------------*/
+/*------------------------Inicio de footer------------------------------*/
+footer {
   font-family: "Cinzel", serif;
   font-size: 20px;
   font-weight: 600;
@@ -381,12 +377,9 @@ footer ul li:hover {
   scale: 1;
 }
 
-/* @MEDIA */
+/* -----------------------------@MEDIA----------------------------------- */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   /*INDEX*/
-  .index_body { /*Permite scrollear en vista mobile*/
-    overflow: scroll;
-  }
   .left_side { /*mantener 100vh*/
     height: 100vh;
     background-image: url(./Media/fondoIndex.png);
@@ -455,14 +448,6 @@ footer ul li:hover {
   .end_menu { /* Solo alineamiento */
     margin-bottom: 20%;
   }
-  /* inicia ubicacion */
-  .ubi_text {
-    margin-right: 40px;
-    margin-left: 40px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  /* Termina ubicacion */
 }
 @media only screen and (min-width: 1100px) {
   /* inicia Header */
@@ -471,7 +456,7 @@ footer ul li:hover {
   }
   /* inicia Footer */
   .texto_index {
-    font-size: 20px;
+    font-size: 16px;
     width: 600px;
   }
   .estilo_link {
@@ -510,6 +495,9 @@ footer ul li:hover {
   }
   .map-responsive { /* mantiene responsive en bajas resoluciones */
     padding-bottom: 40%;
+  }
+  .index_body { /*Permite scrollear en vista mobile*/
+    overflow-y: scroll;
   }
 }
 /* ----------------------------------------------
