@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>KofiStore</title>
 </head>
-<body class="index_body form-bg">
+<body class="index_body ">
     <!-- Header -->
     <header class="container-fluid text-center">
         <div class="col"  >
@@ -29,31 +29,34 @@
         </nav>
     </header>
     <!-- Contenedor -->
-    <section class="py-4 d-flex justify-content-center ">
-        <!-- Form -->
-        <form id="contactForm" netlify class="form form_align ">
-        <!-- input nombre -->
-            <div class="mb-3 text_form">
-                <label class="form-label" for="name">Nombre</label>
-                <input class="form-control" id="name" type="text" placeholder="¿Cuál es tú nombre?" />
-            </div>
-            <!-- Email input -->
-            <div class="mb-3 text_form">
-                <label class="form-label" for="emailAddress">Correo</label>
-                <input class="form-control" id="emailAddress" type="email" placeholder="¿Cómo te contactamos?" />
-            </div>
-            <!-- Mensaje input -->
-            <div class="mb-3 text_form">
-                <label class="form-label" for="message">Mensaje</label>
-                <textarea class="form-control" id="message" type="text" placeholder="Dejanos un mensaje ❤" style="height: 5rem;"></textarea>
-            </div>
-            <!-- Form btn -->
-            <div class="d-grid justify-content-center">
-                <button class="btn-fancy" type="submit">Enviar</button>
-            </div>
-    </section>
+    <main class="contact-bg">
+        <section class="py-4 d-flex align-items-center justify-content-center slide-in-bottom">
+            <!-- Form -->
+            <form id="contactForm" netlify class="form form_align ">
+            <!-- input nombre -->
+                <div class="mb-3 text_form">
+                    <label class="form-label" for="name">Nombre</label>
+                    <input class="form-control" id="name" type="text" placeholder="¿Cuál es tú nombre?" />
+                    </div>
+                <!-- Email input -->
+                <div class="mb-3 text_form">
+                    <label class="form-label" for="emailAddress">Correo</label>
+                    <input class="form-control" id="emailAddress" type="email" placeholder="¿Cómo te contactamos?" />
+                </div>
+                <!-- Mensaje input -->
+                <div class="mb-3 text_form">
+                    <label class="form-label" for="message">Mensaje</label>
+                        <textarea class="form-control" id="message" type="text" placeholder="Dejanos un mensaje ❤" style="height: 5rem;"></textarea>
+                </div>
+                <!-- Form btn -->
+                <div class="d-grid justify-content-center">
+                    <button class="btn-fancy " type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
     <!-- Footer -->
-    <footer class="container-fluid text-center"> <!-- Tiene quedar primero el logo a la izquierda, despues contacto, mail y logo de insta con space around  -->
+    <footer class="container-fluid text-center"> <!-- Tiene quedar primero el logo a la izquierda, despues contacto-->
         <nav>
             <ul class="row align-items-center">
                 <li class="col"><a href="./index.html"><img src="./Media/kofilogo.png" height="80px" width="auto" alt="KofiStore"></a></li>

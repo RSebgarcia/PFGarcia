@@ -12,8 +12,16 @@
     transition:  0.3s;
     font-size: 25px;
 }
-/* margenes generales */
-* {
+@mixin cardstyle {
+    transition: 0.3s;
+    border: #442b0c 2px solid;
+}
+@mixin ubi-hover {
+    &:hover{
+        scale: (1);
+    }
+}
+* { /* margenes generales */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,14 +29,15 @@
 html, body{
     height: 100%;
 }
-body{
+.general-body{
     background-color: #faf1e5;
 }
 /* inicio HEADER*/
-header{ /* Defino footer y header */
+header{ /* Defino header */
     background-image: url(./Media/Banner.jpg);
     background-size: cover;
     width: 100vw;
+    box-shadow: inset 0 0 20px #442b0c;
     div img{
         padding-top: 10px;
         padding-bottom: 10px;
@@ -55,7 +64,6 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
     text-align: center;
     margin-bottom: 16px;
 }
-
 /* inicio INDEX */
 .left_side, .right_side{   /*Split screen, acompañado de @media*/
     height: 80vh;
@@ -79,9 +87,7 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
     font-family: 'Cinzel', serif;
     font-size: 80px;
     text-align: center;
-    
 }
-
 .index_link{ /*call to action*/
     width: 100%;
     transition: 0.3s;
@@ -109,8 +115,7 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
     }
 }
 /* MENU */ 
-/* Estilo general */
-.estilo_menu{
+.estilo_menu{/* Estilo general */
     margin: 5px;    
     color: black;
     background-color: #ffcaac;
@@ -125,25 +130,20 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
     box-shadow: 3px 5px 3px black;
     padding: 10px;
 } 
-
-
-/* Titulos del menu */
-.tit_menu{
+.tit_menu{/* Solo estilo*/
     font-size: 40px;
     font-family: 'Cinzel', serif;
     font-weight: 600;
     padding: 0;
 }
-/* IMAGENES MENU */
-.img_menu{
+.img_menu{ /* Para acomodar dentro del recuadro*/
     width: 200px;
     height: 270px;
     border: 3px solid black ;
     border-radius: 20px;
     object-fit: cover;
 } 
-/* CUARTA IMAGEN, CORRECION */
-.jugo{
+.jugo{ /* CUARTA IMAGEN, CORRECION DE ALINEAMIENTO*/
     margin-top: 48px;
     margin-bottom: 48px;
 }
@@ -155,14 +155,12 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
 }
 /* Fin Menu */
 /* Inicio Servicios */
-.card{  /*defino estilo de cards*/
-    transition: 0.3s;
-    border-radius: 25px;
-    border: #442b0c 2px solid;
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 0px ;
+.card_serv{  /*defino estilo de cards*/
+    @include cardstyle;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius:25px;
     &:hover{
-        scale: 1.1;
+        scale: (1.1);
     }
 }
 .card-img-top{ /*acomodo imagenes dento de los cards*/
@@ -179,10 +177,10 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
     height: 100px;
     line-height: 100px;
 }
-.mb5{
+.mb5{ /*Para extender la vista de la pagina*/
     margin-bottom: 200px;
 }
-.lead{
+.lead{ /*le agrego estilo a la clase de bootstap*/
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -200,31 +198,41 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
         }
     }
 }
-
 /* Fin Servicios */
 /* Inicio de ubicacion */
-.ubi_text{
-    background-color: #dbb098;;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border: #4d2307 2px solid;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: fit-content;
-    padding: 7px 18px 7px 18px;
-    font-size: 40px;
-
+.card_ubi{  /*defino estilo de cards*/
+    @include cardstyle;
+    @include ubi-hover;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius:25px;
+    scale: (0.95);
 }
-.img_ubi{
-    object-fit: contain;
-    border-bottom-left-radius: 20px ;
+.card_ubi_inv{ /*Invierto dos tarjetas para lograr un patron en el centro*/
+    @include cardstyle;
+    @include ubi-hover;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius:25px;
+    scale: (0.95);
 }
-
-.map-responsive{
+.card-title{
+    font-family: 'Cinzel', serif;
+}
+.card-text{
+    font-family: 'Montserrat', serif;
+    font-size: 20px;
+}
+.img_ubi{ /*para alinear el borde donde tiene que estar, igualar a .card_ubi*/
+    border-bottom-left-radius: 25px ;
+}
+.img_ubi_inv{ /*para alinear el borde donde tiene que estar, igualar a .card_ubi*/
+    border-top-left-radius: 25px ;
+}
+.map-responsive{  /*Vuelve responsive google maps, reducir el padding con @media mientras se reduce la pagina*/
     overflow:hidden;
-    padding-bottom:56.25%;
+    padding-bottom:50%;
     position:relative;
     height:0;
+    transition: all 0.3s;
     iframe{
         left:0;
         top:0;
@@ -233,30 +241,38 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
         position:absolute;
     }
 }
-
-
-/*Fin Ubicacion*/
-/* Inicio Contacto*/
-.form-bg{
-    background-image: url(./Media/fondoIndex.png);
+.contact-bg{/* Inicio Contacto*/
+    background-image: url(./Media/contacto.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    min-height: fit-content;
 }
 .form_align{ /*margenes forms*/
-    margin-top: 50px;
-    margin-bottom: auto;
+    margin-top: 5%;
+    margin-bottom: 150px;
     width: 400px;
 }
 .form{ /*estilo form*/
-    background-color: #dbb098;
     padding: 20px;
-    border-radius: 10px;
+    background-color: #dbb098;
+    box-shadow: 0 0 15px #4d2307;
+    border: 2px solid #442b0c;
+    border-radius: 25px;
+    input, textarea{
+        border: 2px solid #442b0c;
+        box-shadow:inset 0 0 3px #4d2307;
+        resize: none;
+    }
 }
 .text_form{ 
-    text-align: center;
+    text-align: start;
     font-size: 25px;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
 }
 ::placeholder{
-    font-family: 'Montserrat', 
+    font-family: 'Montserrat', Serif;
 }
 .btn-fancy{ /*estilo boton*/
     background-color: #4d2307 ;
@@ -270,13 +286,16 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
         text-shadow:  white 0 0 5px;
         scale: 1.1;}
 }
-/* fin contacto */
-/*Inicio de footer*/
-footer{ 
+.slide-in-bottom { /*Animacion de entrada, crada con librerias de CSS*/
+	-webkit-animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+	animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+}
+footer{  /*------------------------Inicio de footer------------------------------*/
     font-family: 'Cinzel', serif;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
+    box-shadow: inset 0 0 15px #442b0c;
     background: url(./Media/Banner.jpg);
     background-size: cover;
     position: fixed;
@@ -292,7 +311,7 @@ footer{
         --bs-gutter-x: 0rem;
         --bs-gutter-y: 0rem;}
     ul{
-        li{
+        li{/*Para generar transiciones*/
             transition: all 0.3s;
             scale: 0.9;
             &:hover{
@@ -301,18 +320,13 @@ footer{
         }
     }
 }
-
-
-
-
 /* @MEDIA */
-
 @media only screen and (min-width: 320px) and (max-width:768px) {
     /*INDEX*/
-    .index_body{
+    .index_body{ /*Permite scrollear en vista mobile*/
         overflow: scroll;
     }
-    .left_side{ 
+    .left_side{ /*mantener 100vh*/
         height: 100vh;
         background-image: url(./Media/fondoIndex.png);
         background-size: cover;
@@ -327,7 +341,7 @@ footer{
         font-size: 40px;
         width: 300px;
     }
-    .right_side{
+    .right_side{ /*Hace desaparecer la parte del index que ya no nos interesa. */
         display: none;
         height: 0vh;
         width: 0%;
@@ -344,99 +358,126 @@ footer{
         height: fit-content;
     }
     // Servicios
-    .card {
+    .card { /*Para ver mejor el contenido */
         scale: (0.8);
         &:hover{
             scale: (0.9);
         }
     }
+    // UBICACION
+    .img_ubi{  /*alinea los bordes de las fotos con los nuevos bordes de la tarjeta*/
+        border-top-right-radius: 20px ;
+        border-bottom-left-radius: 0px ;
+        }
+    }
+@media only screen and (min-width: 768px) {
+    /* Inicia Header */
+    header nav ul li{
+        font-size: 20px;
+    }
+    /* inicia index */
+    .titulo_index{
+        font-size: 50px;
+    }
+    .texto_index{
+        font-size: 20px;
+    width: 400px;
+    }
+    .estilo_link{
+        font-size: 20px;}
+    /* inicia contacto */
+    .form_align{ /* Solo alineamiento */
+        margin-top: 100px;
+        width: 500px;
+    }
+    .end_menu{ /* Solo alineamiento */
+        margin-bottom: 20%;
+    }
+    /* inicia ubicacion */
+    .ubi_text{
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    /* Termina ubicacion */
+}
+@media only screen and (min-width: 1100px) {
+    /* inicia Header */
+    header nav ul li{
+        font-size: 30px;
+    }
+    /* inicia Footer */
+    .texto_index{
+        font-size: 20px;
+        width: 600px;
+    }
+    .estilo_link{
+        font-size: 25px;
+    }
+    /* inicia contacto */
+    .form_align{ /*margenes forms*/
+        width: 600px;
+    }
+    .form{ /*estilo form*/
+        padding: 30px;
+    }
+    .text_form{ 
+        font-size: 30px;
+    }
+    .btn-fancy{ /*estilo boton*/
+        font-size: 30px;
+    }
+    ::placeholder{
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 998px) and (max-width: 1360px){
+        /*Servicios*/
+    .card {
+        scale: (0.9);
+        &:hover{
+            scale: (1);
+        }
+    }
+    .map-responsive{ /* mantiene responsive en bajas resoluciones */
+        padding-bottom:40%;
+    }
+}
+// Keyframes de animaciones
+/* ----------------------------------------------
+ * Generated by Animista on 2022-11-18 22:47:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slide-in-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-bottom {
+    0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    }
+}
+@keyframes slide-in-bottom {
+    0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    }
 }
 
-    @media only screen and (min-width: 769px) {
-        /* Inicia Header */
-        header nav ul li{
-            font-size: 20px;
-        }
-        /* inicia index */
-        .titulo_index{
-            font-size: 50px;
-        }
-        .texto_index{
-            font-size: 20px;
-        width: 400px;
-        }
-        .estilo_link{
-            font-size: 20px;}
-        /* inicia contacto */
-        
-        .form_align{
-            margin-top: 100px;
-            width: 500px;
-        }
-        .end_menu{
-            margin-bottom: 20%;
-        }
-        /* inicia ubicacion */
-        .ubi_text{
-            margin-right: 40px;
-            margin-left: 40px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-        /* Termina ubicacion */
-    }
-    
-    @media only screen and (min-width: 1100px) {
-        /* inicia Header */
-        header nav ul li{
-            font-size: 20px;
-        }
-        /* inicia Footer */
-        .texto_index{
-            font-size: 20px;
-            width: 600px;
-        }
-        .estilo_link{
-            font-size: 25px;
-        }
-        /* inicia servicios */
-        .card3{
-            margin-bottom: 0%;
-        }
-        /* Inicia ubicacion */
-        .ubi_h1{
-            font-family: 'Cinzel', serif;
-            font-size: 50px;
-            margin-bottom: 0;
-            margin-top: 8px;
-        } 
-        /* inicia contacto */
-        .form_align{ /*margenes forms*/
-            width: 600px;
-        }
-        .form{ /*estilo form*/
-            padding: 30px;
-            border-radius: 10px;
-        }
-        .text_form{ 
-            font-size: 30px;
-        }
-        .btn-fancy{ /*estilo boton*/
-            font-size: 30px;
-        }
-        ::placeholder{
-            font-size: 20px;
-        }
-    }
-    @media only screen and (min-width: 998px) and (max-width: 1360px){
-            // Servicios
-    .card {
-        scale: (0.7);
-        &:hover{
-            scale: (0.8);
-        }
-    }
-    .row-align{
-        margin-top: -130px;
-    }
-}

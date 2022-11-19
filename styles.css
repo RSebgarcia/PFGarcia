@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;1,200;1,300;1,600;1,900&family=Oswald:wght@200;300;400&family=Signika+Negative:wght@300;400;700&display=swap");
-/* margenes generales */
-* {
+* { /* margenes generales */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,15 +10,16 @@ html, body {
   height: 100%;
 }
 
-body {
+.general-body {
   background-color: #faf1e5;
 }
 
 /* inicio HEADER*/
-header { /* Defino footer y header */
+header { /* Defino header */
   background-image: url(./Media/Banner.jpg);
   background-size: cover;
   width: 100vw;
+  box-shadow: inset 0 0 20px #442b0c;
 }
 header div img {
   padding-top: 10px;
@@ -117,8 +117,7 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
 }
 
 /* MENU */
-/* Estilo general */
-.estilo_menu {
+.estilo_menu { /* Estilo general */
   margin: 5px;
   color: black;
   background-color: #ffcaac;
@@ -134,16 +133,14 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   padding: 10px;
 }
 
-/* Titulos del menu */
-.tit_menu {
+.tit_menu { /* Solo estilo*/
   font-size: 40px;
   font-family: "Cinzel", serif;
   font-weight: 600;
   padding: 0;
 }
 
-/* IMAGENES MENU */
-.img_menu {
+.img_menu { /* Para acomodar dentro del recuadro*/
   width: 200px;
   height: 270px;
   border: 3px solid black;
@@ -152,8 +149,7 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
      object-fit: cover;
 }
 
-/* CUARTA IMAGEN, CORRECION */
-.jugo {
+.jugo { /* CUARTA IMAGEN, CORRECION DE ALINEAMIENTO*/
   margin-top: 48px;
   margin-bottom: 48px;
 }
@@ -168,14 +164,13 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
 
 /* Fin Menu */
 /* Inicio Servicios */
-.card { /*defino estilo de cards*/
+.card_serv { /*defino estilo de cards*/
   transition: 0.3s;
-  border-radius: 25px;
   border: #442b0c 2px solid;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
-.card:hover {
+.card_serv:hover {
   scale: 1.1;
 }
 
@@ -197,11 +192,11 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   line-height: 100px;
 }
 
-.mb5 {
+.mb5 { /*Para extender la vista de la pagina*/
   margin-bottom: 200px;
 }
 
-.lead {
+.lead { /*le agrego estilo a la clase de bootstap*/
   font-size: 25px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -222,31 +217,51 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
 
 /* Fin Servicios */
 /* Inicio de ubicacion */
-.ubi_text {
-  background-color: #dbb098;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border: #4d2307 2px solid;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 7px 18px 7px 18px;
-  font-size: 40px;
+.card_ubi { /*defino estilo de cards*/
+  transition: 0.3s;
+  border: #442b0c 2px solid;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  scale: 0.95;
+}
+.card_ubi:hover {
+  scale: 1;
 }
 
-.img_ubi {
-  -o-object-fit: contain;
-     object-fit: contain;
-  border-bottom-left-radius: 20px;
+.card_ubi_inv { /*Invierto dos tarjetas para lograr un patron en el centro*/
+  transition: 0.3s;
+  border: #442b0c 2px solid;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  scale: 0.95;
+}
+.card_ubi_inv:hover {
+  scale: 1;
 }
 
-.map-responsive {
+.card-title {
+  font-family: "Cinzel", serif;
+}
+
+.card-text {
+  font-family: "Montserrat", serif;
+  font-size: 20px;
+}
+
+.img_ubi { /*para alinear el borde donde tiene que estar, igualar a .card_ubi*/
+  border-bottom-left-radius: 25px;
+}
+
+.img_ubi_inv { /*para alinear el borde donde tiene que estar, igualar a .card_ubi*/
+  border-top-left-radius: 25px;
+}
+
+.map-responsive { /*Vuelve responsive google maps, reducir el padding con @media mientras se reduce la pagina*/
   overflow: hidden;
-  padding-bottom: 56.25%;
+  padding-bottom: 50%;
   position: relative;
   height: 0;
+  transition: all 0.3s;
 }
 .map-responsive iframe {
   left: 0;
@@ -256,40 +271,52 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   position: absolute;
 }
 
-/*Fin Ubicacion*/
-/* Inicio Contacto*/
-.form-bg {
-  background-image: url(./Media/fondoIndex.png);
+.contact-bg { /* Inicio Contacto*/
+  background-image: url(./Media/contacto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 .form_align { /*margenes forms*/
-  margin-top: 50px;
-  margin-bottom: auto;
+  margin-top: 5%;
+  margin-bottom: 150px;
   width: 400px;
 }
 
 .form { /*estilo form*/
-  background-color: #dbb098;
   padding: 20px;
-  border-radius: 10px;
+  background-color: #dbb098;
+  box-shadow: 0 0 15px #4d2307;
+  border: 2px solid #442b0c;
+  border-radius: 25px;
+}
+.form input, .form textarea {
+  border: 2px solid #442b0c;
+  box-shadow: inset 0 0 3px #4d2307;
+  resize: none;
 }
 
 .text_form {
-  text-align: center;
+  text-align: start;
   font-size: 25px;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
 }
 
 ::-moz-placeholder {
-  font-family: "Montserrat";
+  font-family: "Montserrat", Serif;
 }
 
 :-ms-input-placeholder {
-  font-family: "Montserrat";
+  font-family: "Montserrat", Serif;
 }
 
 ::placeholder {
-  font-family: "Montserrat";
+  font-family: "Montserrat", Serif;
 }
 
 .btn-fancy { /*estilo boton*/
@@ -308,13 +335,17 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
   scale: 1.1;
 }
 
-/* fin contacto */
-/*Inicio de footer*/
-footer {
+.slide-in-bottom { /*Animacion de entrada, crada con librerias de CSS*/
+  -webkit-animation: slide-in-bottom 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+  animation: slide-in-bottom 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+footer { /*------------------------Inicio de footer------------------------------*/
   font-family: "Cinzel", serif;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
+  box-shadow: inset 0 0 15px #442b0c;
   background: url(./Media/Banner.jpg);
   background-size: cover;
   position: fixed;
@@ -342,7 +373,7 @@ footer .row { /*correcion de visuales en footer*/
   --bs-gutter-x: 0rem;
   --bs-gutter-y: 0rem;
 }
-footer ul li {
+footer ul li { /*Para generar transiciones*/
   transition: all 0.3s;
   scale: 0.9;
 }
@@ -353,10 +384,10 @@ footer ul li:hover {
 /* @MEDIA */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   /*INDEX*/
-  .index_body {
+  .index_body { /*Permite scrollear en vista mobile*/
     overflow: scroll;
   }
-  .left_side {
+  .left_side { /*mantener 100vh*/
     height: 100vh;
     background-image: url(./Media/fondoIndex.png);
     background-size: cover;
@@ -371,7 +402,7 @@ footer ul li:hover {
     font-size: 40px;
     width: 300px;
   }
-  .right_side {
+  .right_side { /*Hace desaparecer la parte del index que ya no nos interesa. */
     display: none;
     height: 0vh;
     width: 0%;
@@ -389,14 +420,18 @@ footer ul li:hover {
     height: -moz-fit-content;
     height: fit-content;
   }
-  .card {
+  .card { /*Para ver mejor el contenido */
     scale: 0.8;
   }
   .card:hover {
     scale: 0.9;
   }
+  .img_ubi { /*alinea los bordes de las fotos con los nuevos bordes de la tarjeta*/
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+  }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   /* Inicia Header */
   header nav ul li {
     font-size: 20px;
@@ -413,11 +448,11 @@ footer ul li:hover {
     font-size: 20px;
   }
   /* inicia contacto */
-  .form_align {
+  .form_align { /* Solo alineamiento */
     margin-top: 100px;
     width: 500px;
   }
-  .end_menu {
+  .end_menu { /* Solo alineamiento */
     margin-bottom: 20%;
   }
   /* inicia ubicacion */
@@ -432,7 +467,7 @@ footer ul li:hover {
 @media only screen and (min-width: 1100px) {
   /* inicia Header */
   header nav ul li {
-    font-size: 20px;
+    font-size: 30px;
   }
   /* inicia Footer */
   .texto_index {
@@ -442,24 +477,12 @@ footer ul li:hover {
   .estilo_link {
     font-size: 25px;
   }
-  /* inicia servicios */
-  .card3 {
-    margin-bottom: 0%;
-  }
-  /* Inicia ubicacion */
-  .ubi_h1 {
-    font-family: "Cinzel", serif;
-    font-size: 50px;
-    margin-bottom: 0;
-    margin-top: 8px;
-  }
   /* inicia contacto */
   .form_align { /*margenes forms*/
     width: 600px;
   }
   .form { /*estilo form*/
     padding: 30px;
-    border-radius: 10px;
   }
   .text_form {
     font-size: 30px;
@@ -478,13 +501,45 @@ footer ul li:hover {
   }
 }
 @media only screen and (min-width: 998px) and (max-width: 1360px) {
+  /*Servicios*/
   .card {
-    scale: 0.7;
+    scale: 0.9;
   }
   .card:hover {
-    scale: 0.8;
+    scale: 1;
   }
-  .row-align {
-    margin-top: -130px;
+  .map-responsive { /* mantiene responsive en bajas resoluciones */
+    padding-bottom: 40%;
+  }
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2022-11-18 22:47:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slide-in-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }/*# sourceMappingURL=styles.css.map */
