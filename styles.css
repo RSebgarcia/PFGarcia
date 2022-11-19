@@ -8,6 +8,7 @@
 
 .general-body {
   background-color: #faf1e5;
+  overflow-x: hidden;
 }
 
 /* -----------------------------------------------inicio HEADER----------------------------*/
@@ -25,12 +26,16 @@ header div img {
 header div img:hover {
   scale: 1.1;
 }
-header li { /* Esto genera la caja bonita en la lista de navegacion*/
+header ul {
+  padding-left: 0px;
+}
+header ul li { /* Esto genera la caja bonita en la lista de navegacion*/
   text-decoration: none;
   background-color: #f3eade;
   color: black;
   border: #442b0c 2px solid;
   margin-right: 15px;
+  margin-left: 15px;
   font-family: "Cinzel", serif;
   font-weight: 500;
   border-radius: 25px;
@@ -38,11 +43,11 @@ header li { /* Esto genera la caja bonita en la lista de navegacion*/
   transition: 0.3s;
   font-size: 25px;
 }
-header li:hover {
+header ul li:hover {
   scale: 1.1;
   color: black;
 }
-header li a {
+header ul li a {
   color: black;
   padding: 0 4px;
   text-decoration: none;
@@ -50,7 +55,6 @@ header li a {
 
 header nav ul, footer ul { /* estilo compartidos footer y header */
   list-style-type: none;
-  text-align: center;
   margin-bottom: 16px;
 }
 
@@ -130,7 +134,7 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
 }
 
 .tit_menu { /* Solo estilo*/
-  font-size: 40px;
+  font-size: 34px;
   font-family: "Cinzel", serif;
   font-weight: 600;
   padding: 0;
@@ -183,6 +187,8 @@ header nav ul, footer ul { /* estilo compartidos footer y header */
 .tit_serv {
   background-color: #dbb098;
   font-family: "Cinzel", serif;
+  font-weight: 600;
+  font-size: 34px;
   height: 100px;
   line-height: 100px;
 }
@@ -356,6 +362,7 @@ footer .link {
   color: black;
   border: #442b0c 2px solid;
   margin-right: 15px;
+  margin-left: 15px;
   font-family: "Cinzel", serif;
   font-weight: 500;
   border-radius: 25px;
@@ -384,7 +391,7 @@ footer ul li:hover {
     overflow-y: scroll;
   }
   .left_side { /*mantener 100vh*/
-    height: 100vh;
+    min-height: 800px;
     background-image: url(./Media/fondoIndex.png);
     background-size: cover;
     background-position: center;

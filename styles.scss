@@ -5,6 +5,7 @@
     color: black;
     border:#442b0c 2px solid;
     margin-right: 15px;
+    margin-left: 15px;
     font-family: 'Cinzel', serif;
     font-weight: 500;
     border-radius: 25px;
@@ -29,6 +30,7 @@
 
 .general-body{
     background-color: #faf1e5;
+    overflow-x:hidden;
 }
 /* -----------------------------------------------inicio HEADER----------------------------*/
 header{ /* Defino header */
@@ -44,22 +46,26 @@ header{ /* Defino header */
             scale: 1.1;
         }  
     }
-    li{ /* Esto genera la caja bonita en la lista de navegacion*/
-        @include botonesNav;
-            &:hover{
-            scale: 1.1;
-            color: black;
-        }
-        a{ 
-            color: black;
-            padding: 0 4px;
-            text-decoration: none;
+    ul{
+        padding-left: 0px;
+        li{ /* Esto genera la caja bonita en la lista de navegacion*/
+            @include botonesNav;
+                &:hover{
+                scale: 1.1;
+                color: black;
+            }
+            a{ 
+                color: black;
+                padding: 0 4px;
+                text-decoration: none;
+                
+            }
         }
     }
+
 }
 header nav ul, footer ul{  /* estilo compartidos footer y header */
     list-style-type: none;
-    text-align: center;
     margin-bottom: 16px;
 }
 /* ----------------------------------------inicio INDEX---------------------------------- */
@@ -129,7 +135,7 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
     padding: 10px;
 } 
 .tit_menu{/* Solo estilo*/
-    font-size: 40px;
+    font-size: 34px;
     font-family: 'Cinzel', serif;
     font-weight: 600;
     padding: 0;
@@ -171,8 +177,11 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
 .tit_serv{
     background-color: #dbb098;
     font-family:'Cinzel', serif;
+    font-weight: 600;
+    font-size: 34px;
     height: 100px;
     line-height: 100px;
+
 }
 .mb5{ /*Para extender la vista de la pagina*/
     margin-bottom: 200px;
@@ -325,7 +334,7 @@ footer{
         overflow-y: scroll;
     }
     .left_side{ /*mantener 100vh*/
-        height: 100vh;
+        min-height: 800px;
         background-image: url(./Media/fondoIndex.png);
         background-size: cover;
         background-position: center;
