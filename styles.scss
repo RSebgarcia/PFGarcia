@@ -287,7 +287,7 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
 	-webkit-animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
 	animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
 }
- /*------------------------Inicio de footer------------------------------*/
+/*------------------------Inicio de footer------------------------------*/
 footer{ 
     font-family: 'Cinzel', serif;
     font-size: 20px;
@@ -321,6 +321,9 @@ footer{
 /* -----------------------------@MEDIA----------------------------------- */
 @media only screen and (min-width: 320px) and (max-width:768px) {
     /*INDEX*/
+    .index_body{ /*Permite scrollear en vista mobile*/
+        overflow-y: scroll;
+    }
     .left_side{ /*mantener 100vh*/
         height: 100vh;
         background-image: url(./Media/fondoIndex.png);
@@ -396,7 +399,7 @@ footer{
     }
     /* inicia Footer */
     .texto_index{
-        font-size: 16px;
+        font-size: 18px;
         width: 600px;
     }
     .estilo_link{

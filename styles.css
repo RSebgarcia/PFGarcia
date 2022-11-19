@@ -380,6 +380,9 @@ footer ul li:hover {
 /* -----------------------------@MEDIA----------------------------------- */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   /*INDEX*/
+  .index_body { /*Permite scrollear en vista mobile*/
+    overflow-y: scroll;
+  }
   .left_side { /*mantener 100vh*/
     height: 100vh;
     background-image: url(./Media/fondoIndex.png);
@@ -456,7 +459,7 @@ footer ul li:hover {
   }
   /* inicia Footer */
   .texto_index {
-    font-size: 16px;
+    font-size: 18px;
     width: 600px;
   }
   .estilo_link {
