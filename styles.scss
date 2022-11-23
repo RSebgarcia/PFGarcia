@@ -20,14 +20,19 @@
 @mixin ubi-hover {
     &:hover{
         scale: (1);
+        box-shadow: #333 0 0 30px 5px;
     }
+}
+html{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 * { /* margenes generales */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 .general-body{
     background-color: #faf1e5;
     overflow-x:hidden;
@@ -163,6 +168,7 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
     border-top-right-radius: 25px;
     border-bottom-left-radius:25px;
     &:hover{
+        box-shadow: #442b0c  0 0 8px;
         scale: (1.1);
     }
 }
@@ -181,7 +187,8 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
     font-size: 34px;
     height: 100px;
     line-height: 100px;
-
+    border-top: #a85d35  2px solid;
+    border-bottom: #a85d35  2px solid;
 }
 .mb5{ /*Para extender la vista de la pagina*/
     margin-bottom: 200px;
@@ -250,9 +257,7 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
 .contact-bg{
     background-image: url(./Media/contacto.jpg);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: fit-content;
+    background-repeat: repeat;
 }
 .form_align{ /*margenes forms*/
     margin-top: 5%;
@@ -292,7 +297,7 @@ header nav ul, footer ul{  /* estilo compartidos footer y header */
         text-shadow:  white 0 0 5px;
         scale: 1.1;}
 }
-.slide-in-bottom { /*Animacion de entrada, crada con librerias de CSS*/
+.slide-in-bottom { /*Animacion de entrada, creada con librerias de CSS*/
 	-webkit-animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
 	animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
 }
@@ -310,6 +315,10 @@ footer{
     left: 0;
     height: 80px;
     width: 100vw;
+    img{
+        width: 120px;
+        padding-top: 7px;
+    }
     .link{
         @include botonesNav;}
     .row{ /*correcion de visuales en footer*/
@@ -329,6 +338,20 @@ footer{
 }
 /* -----------------------------@MEDIA----------------------------------- */
 @media only screen and (min-width: 320px) and (max-width:768px) {
+    /*HEADER*/
+    header{
+        img{
+            height: 80px;
+            width: auto;
+        }
+        nav{
+            ul{
+                li{
+                    font-size: 18px;
+                }
+            }
+        }   
+    }
     /*INDEX*/
     .index_body{ /*Permite scrollear en vista mobile*/
         overflow-y: scroll;
@@ -362,7 +385,13 @@ footer{
     }
     /* Inicia footer */
     footer{
-        height: fit-content;
+        height: 120px;
+        .link{
+            font-size: 18px;
+        }
+        img{
+            height: inherit;
+        }
     }
     // Servicios
     .card { /*Para ver mejor el contenido */
@@ -400,6 +429,25 @@ footer{
     .end_menu{ /* Solo alineamiento */
         margin-bottom: 20%;
     }
+    footer{
+        .link{
+            font-size: 20px;
+        }
+}}
+@media only screen and (min-width: 998px) and (max-width: 1360px){
+        /*Servicios*/
+    .card {
+        scale: (0.9);
+        &:hover{
+            scale: (1);
+        }
+    }
+    .map-responsive{ /* mantiene responsive en bajas resoluciones */
+        padding-bottom:40%;
+    }
+    .index_body{ /*Permite scrollear en vista mobile*/
+        overflow-y: scroll;
+    }
 }
 @media only screen and (min-width: 1100px) {
     /* inicia Header */
@@ -430,21 +478,7 @@ footer{
     ::placeholder{
         font-size: 20px;
     }
-}
-@media only screen and (min-width: 998px) and (max-width: 1360px){
-        /*Servicios*/
-    .card {
-        scale: (0.9);
-        &:hover{
-            scale: (1);
-        }
-    }
-    .map-responsive{ /* mantiene responsive en bajas resoluciones */
-        padding-bottom:40%;
-    }
-    .index_body{ /*Permite scrollear en vista mobile*/
-        overflow-y: scroll;
-    }
+    
 }
 // ---------------Keyframes de animaciones----------------------------
 /* ----------------------------------------------
