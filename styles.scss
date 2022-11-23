@@ -67,7 +67,6 @@ header{ /* Defino header */
             }
         }
     }
-
 }
 header nav ul, footer ul{  /* estilo compartidos footer y header */
     list-style-type: none;
@@ -387,7 +386,7 @@ footer{
     footer{
         height: 120px;
         .link{
-            font-size: 18px;
+            font-size: 16px;
         }
         img{
             height: inherit;
@@ -516,4 +515,3 @@ footer{
     opacity: 1;
     }
 }
-
